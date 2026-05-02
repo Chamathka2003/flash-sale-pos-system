@@ -23,9 +23,9 @@ function Cart({ items, onUpdateItem, onRemoveItem, onCheckout, total }) {
                   <button
                     onClick={() => onRemoveItem(item.product_id)}
                     className="btn-remove"
-                    style={{ width: "30px", height: "25px", marginTop: "5px" }}
+                    title="Remove item"
                   >
-                    Remove
+                    ×
                   </button>
                 </div>
 
