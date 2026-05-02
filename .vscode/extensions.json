@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "es128.es7-react-js-snippets",
+    "dsznajder.es7-react-js-snippets",
+    "msjsdiag.debugger-for-chrome",
+    "ritwickdey.rest-client",
+    "ms-vscode-remote.remote-wsl"
+  ]
+}

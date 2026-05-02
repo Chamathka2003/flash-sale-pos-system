@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Backend Server",
+    "type": "python",
+    "request": "launch",
+    "program": "${workspaceFolder}/backend/manage.py",
+    "console": "integratedTerminal",
+    "justMyCode": true,
+    "args": [
+      "runserver"
+    ],
+    "django": true
+  },
+  {
+    "name": "Load Test",
+    "type": "python",
+    "request": "launch",
+    "program": "${workspaceFolder}/backend/load_test.py",
+    "console": "integratedTerminal",
+    "justMyCode": true
+  },
+  {
+    "name": "Populate Data",
+    "type": "python",
+    "request": "launch",
+    "program": "${workspaceFolder}/backend/populate_data.py",
+    "console": "integratedTerminal",
+    "justMyCode": true
+  }
+]

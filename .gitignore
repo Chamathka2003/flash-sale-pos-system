@@ -31,13 +31,15 @@ env.bak/
 venv.bak/
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
-*.code-workspace
+
+# Local VS Code settings (keep workspace config)
+.vscode/launch.json.local
+.vscode/settings.local.json
 
 # Django
 *.log
