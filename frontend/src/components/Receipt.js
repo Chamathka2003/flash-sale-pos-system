@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/App.css';
+import React from "react";
+import "../styles/App.css";
 
 function Receipt({ order, items, onClose }) {
   const receiptDate = new Date().toLocaleString();
@@ -13,7 +13,9 @@ function Receipt({ order, items, onClose }) {
             <p>Receipt</p>
           </div>
 
-          <div className="receipt-separator">- - - - - - - - - - - - - - - - -</div>
+          <div className="receipt-separator">
+            - - - - - - - - - - - - - - - - -
+          </div>
 
           <div className="receipt-info">
             <div className="info-line">
@@ -26,7 +28,9 @@ function Receipt({ order, items, onClose }) {
             </div>
           </div>
 
-          <div className="receipt-separator">- - - - - - - - - - - - - - - - -</div>
+          <div className="receipt-separator">
+            - - - - - - - - - - - - - - - - -
+          </div>
 
           <div className="receipt-items">
             <div className="item-header">
@@ -34,39 +38,61 @@ function Receipt({ order, items, onClose }) {
               <span className="item-qty">QTY</span>
               <span className="item-price">PRICE</span>
             </div>
-            <div className="receipt-separator">- - - - - - - - - - - - - - - - -</div>
-            
-            {items && items.map((item, index) => (
-              <div key={index} className="receipt-item">
-                <div className="item-line">
-                  <span className="item-desc">{item.name || item.product_name}</span>
-                  <span className="item-qty">{item.quantity}</span>
-                  <span className="item-price">${parseFloat(item.unit_price).toFixed(2)}</span>
+            <div className="receipt-separator">
+              - - - - - - - - - - - - - - - - -
+            </div>
+
+            {items && items.length > 0 ? (
+              items.map((item, index) => (
+                <div key={index} className="receipt-item">
+                  <div className="item-line">
+                    <span className="item-desc">
+                      {item.name || item.product_name}
+                    </span>
+                    <span className="item-qty">{item.quantity}</span>
+                    <span className="item-price">
+                      ${parseFloat(item.unit_price).toFixed(2)}
+                    </span>
+                  </div>
+                  <div className="item-subtotal">
+                    Subtotal: ${(item.quantity * item.unit_price).toFixed(2)}
+                  </div>
                 </div>
-                <div className="item-subtotal">
-                  Subtotal: ${(item.quantity * item.unit_price).toFixed(2)}
-                </div>
+              ))
+            ) : (
+              <div className="receipt-item">
+                <p style={{ fontSize: "10px", color: "#999" }}>
+                  No items found
+                </p>
               </div>
-            ))}
+            )}
           </div>
 
-          <div className="receipt-separator">= = = = = = = = = = = = = = = = =</div>
+          <div className="receipt-separator">
+            = = = = = = = = = = = = = = = = =
+          </div>
 
           <div className="receipt-total">
             <div className="total-line">
               <span>TOTAL:</span>
-              <span className="total-amount">${parseFloat(order.total_amount).toFixed(2)}</span>
+              <span className="total-amount">
+                ${parseFloat(order.total_amount).toFixed(2)}
+              </span>
             </div>
           </div>
 
-          <div className="receipt-separator">- - - - - - - - - - - - - - - - -</div>
+          <div className="receipt-separator">
+            - - - - - - - - - - - - - - - - -
+          </div>
 
           <div className="receipt-footer">
             <p>Thank you for your purchase!</p>
             <p className="status">Status: {order.status.toUpperCase()}</p>
           </div>
 
-          <div className="receipt-separator">- - - - - - - - - - - - - - - - -</div>
+          <div className="receipt-separator">
+            - - - - - - - - - - - - - - - - -
+          </div>
 
           <button onClick={onClose} className="btn-close-receipt">
             Close Receipt

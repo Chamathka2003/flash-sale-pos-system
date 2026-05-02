@@ -227,11 +227,25 @@ def checkout(request):
             order.status = 'completed'
             order.save()
 
+            # Get order items for response
+            order_items = OrderItem.objects.filter(order=order)
+            items_data = [
+                {
+                    'product_id': item.product.id,
+                    'name': item.product.name,
+                    'quantity': item.quantity,
+                    'unit_price': float(item.unit_price),
+                    'subtotal': float(item.subtotal)
+                }
+                for item in order_items
+            ]
+
         return Response({
             'message': 'Checkout successful',
             'order_id': order.id,
             'order_number': order.order_number,
             'total_amount': float(order.total_amount),
+            'items': items_data,
             'items_count': len(cart_items),
             'status': order.status
         }, status=status.HTTP_201_CREATED)
