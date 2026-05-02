@@ -466,3 +466,6 @@ CORS_ALLOWED_ORIGINS = [
 - Email receipts
 - Refund/Return management
 
+##Author
+Chamathka Jayodavi
+GitHub: https://github.com/Chamathka2003
