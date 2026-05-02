@@ -23,19 +23,19 @@ This project addresses three main challenges:
 Assignment01/
 ├── backend/
 │   ├── config/
-│   │   ├── settings.py       # Django configuration
-│   │   ├── urls.py           # URL routing
-│   │   └── wsgi.py           # WSGI application
+│   │   ├── settings.py       
+│   │   ├── urls.py         
+│   │   └── wsgi.py           
 │   ├── api/
-│   │   ├── models.py         # Database models
-│   │   ├── views.py          # API endpoints
-│   │   ├── serializers.py    # DRF serializers
-│   │   ├── urls.py           # API routes
-│   │   └── admin.py          # Admin interface
-│   ├── manage.py             # Django CLI
-│   ├── populate_data.py      # Data population script (100k records)
-│   ├── load_test.py          # Concurrency test script
-│   └── requirements.txt      # Python dependencies
+│   │   ├── models.py         
+│   │   ├── views.py        
+│   │   ├── serializers.py    
+│   │   ├── urls.py           
+│   │   └── admin.py          
+│   ├── manage.py             
+│   ├── populate_data.py      
+│   ├── load_test.py          
+│   └── requirements.txt      
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
@@ -466,20 +466,3 @@ CORS_ALLOWED_ORIGINS = [
 - Email receipts
 - Refund/Return management
 
-## Submission
-
-Repository link: [Your GitHub Repository URL]
-
-## License
-
-MIT License
-
-## Contact
-
-For questions or issues, please open a GitHub issue.
-
----
-
-**Developed for**: Intern Assignment - Flash Sale POS System
-**Submission Date**: 2026-05-02
-**Status**: ✅ Complete
